@@ -1,0 +1,483 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* root is used to select the full html tag and itis also used to declare the global variables */
+:root{
+    --primary-colour:#f0f5ff;
+    --secondary-colour:#f1f2f4;
+    --accent-colour: #1c41d6;
+    --accent-colour-dark:#051a6d;
+    --Primary-text-color:#141414;
+    --secondary-text-color:#141414;
+    --another-colour:#878787;
+    --highcolour:#ffff;
+    --padding-inline-section :4px;    
+}
+
+body{
+    color: var(--Primary-color);
+    background-color: var(--secondary-colour);
+    /* background-color: var(--primary-colour); */
+    
+}
+
+h1{
+    font-size: 3rem;
+}
+h2{
+    font-size: 2rem;
+
+}
+h3{
+    font-size: 1.5rem;
+}
+p{
+font-size: 1.2rem;
+color: var(--secondary-text-color);
+line-height: 1.8rem;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    display: inline-block;
+}
+
+/* Utility class */
+
+.small-bold-text{
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.container{
+    max-width: 1416px;
+    margin-inline: auto;
+    padding-inline: var(--padding-inline-section);
+}
+
+
+.flex{
+    display: flex;
+    align-items: center;
+}
+.hover-links{
+    color: var(--Primary-text-color);
+}
+.hover-links:hover{
+    color: var(--accent-colour);
+    transition: 0.3s ease-in-out;
+}
+
+.primary-button{
+    background-color: var(--accent-colour);
+    border-radius: 10rem;
+    color: var(--primary-colour) !important ;
+}
+
+.primary-button:hover{
+    background-color: var(--accent-colour-dark);
+    transition: 0.2s ease-in-out;
+}
+.bx-shadow{
+    box-shadow: 0 0 0 0.4rem rgba(0,0,0,0.3);
+}
+
+/* Header section */
+
+
+.search-container{
+    
+    height: 45px;
+    border-radius: .6rem;
+    flex-grow: 1;
+    background-color: var(--primary-colour);
+    margin-left: 1rem;
+    margin-right: 1rem;
+    padding: .2rem 0rem .2rem 1rem;
+    height: 100%;
+    justify-content: flex-start;
+    gap: 0.2rem;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0 0 3rem;
+
+}
+.search-icon-container{
+    /* background-color: aqua; */
+    height: 100%;
+    
+}
+.input-container{
+    /* background-color: aqua; */
+    width: 100%;
+    height: 100%;
+    border: none;
+    font-size: 1.2rem;
+    background-color: var(--primary-colour);
+    outline: none;
+}
+ 
+nav{
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+    /* background-color: yellow; */
+
+}
+.main-nav{
+    
+    justify-content: space-between;
+    padding: 10px 0 10px;
+    /* background-color: red; */
+}
+
+.right-nav-container{
+    justify-content: space-between;
+    /* background-color: #1c41d6; */
+    flex-grow: 0.1;
+    padding-left: 1rem;
+    gap: 0.5rem;
+}
+.category-nav{
+    gap: .4rem;
+    
+}
+
+header{
+    background-color: var(--highcolour);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    
+    /* Ensure it's above other content */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    transition: top 0.3s; /* Add smooth transition for hiding/showing */
+    width: 100%; /* Ensure header spans full width */
+   
+}
+
+main{
+    padding-top: 65px;
+}
+
+/* product category     */
+
+
+section{
+    background-color: var(--highcolour);
+    margin: 10px 15px;
+}
+.product-all-category-container{
+    
+   
+   padding: 15px 130px 15px 130px;  
+   box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1) 
+}
+
+.all-product-category{
+    justify-content: space-evenly;
+    background-color:var(--highcolour);
+}
+
+.category-product-container{
+    flex-direction: column;
+    
+}
+
+.category-product-container .category-product-text p{
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+/* image slider section */
+
+.image-slider{
+    overflow: hidden;
+    height: 245px;
+   
+
+}
+
+.banner-image{
+    height: 100%;
+    width: 100%;
+    background-image:url("https://rukminim2.flixcart.com/fk-p-flap/1600/270/image/93b99990a7fa61d6.jpg?q=20");
+    position: relative;
+    background-size: cover;
+    }
+
+.above-hidder-banner{
+    /* background-color: green; */
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    justify-content:space-between;
+}
+
+.btn{
+    height: 40%;
+    width: 3%;
+    background-color: white;
+    
+}
+
+.left-btn{
+
+    border-radius:  0px 10px 10px 0px;
+
+}
+
+.right-btn{
+    border-radius:  10px 0px 0px 10px;
+}
+
+/* Product category like Best of electronics  */
+
+.round-button svg{
+    background-color: var(--accent-colour);
+    color: white;
+    border-radius: 15px;
+    height: 25px;
+    width: 25px;
+    }
+
+.product-category-header{
+    justify-content: space-between;
+    padding: 20px;
+    
+}
+ .product-down{
+    flex-direction: column;
+    padding-top: 5px;
+    /* news */
+    text-align: center;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+} 
+
+.product{
+    flex-direction: column;
+    border: 1px solid #e3e3e3;
+    border-radius: 4px;
+    margin: 8px;
+    padding: 10px;
+    
+    width: 230px;
+    height: 260px; 
+    
+    align-items: center;
+   
+}
+.product-name{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-weight: bold; /* Make the product name bold */
+    width:100%
+
+}
+
+ .product-image {
+            width: 100%; /* Ensure the image fills the container */
+            height: 80%; /* Set a fixed height for the product image */
+            overflow: hidden; /* Hide any overflowing parts of the image */
+        }
+
+        .product-image img {
+            width: 195px; /* Ensure the image fills its container */
+            height: 100%; /* Allow the image to fill its container */
+            object-fit: contain; /* Scale the image to fit inside its container */
+        }
+
+            .image-box{
+    /* background-color: red; */
+    /* z-index: 10; */
+    height: 100%;
+    width: 100%;
+     }
+     
+     .image-box:hover{
+        transform: scale(1.025);
+     }
+
+.product-image-container{
+    /* background-color: rebeccapurple; */
+    overflow: scroll;
+    
+    
+   
+}
+
+
+
+/* .product-category-container{
+    background-color: red;
+    z-index: 1;
+} */
+
+.right-side-category{
+    overflow: scroll;
+    width: 85%;
+}
+
+.Boe-side-image-container img{
+    
+    height: 350px;
+    width: 95%;
+    /* border-radius: 10px; */
+    margin-left: 10px;
+    
+}
+
+.Boe-side-image-container{
+    margin-left: 1px;
+    
+}
+
+/* (2*2)+ 1 big image  */
+.Best-of-summer-container1{
+    background-color: blue;
+    height: 618px;
+}
+
+.Best-of-summer-container1 img{
+    height: 100%;
+    width: 100%;
+}
+
+
+/* summer essentils-img */
+.summer-essentials-img img{
+  aspect-ratio: 438.667 / 760.667;
+  width: 100%;
+  /* margin-left: 45px; */
+
+}
+
+
+
+.product .product-image img:hover{
+    transform: scale(1.1);
+}
+
+/* Bestod beauty and more */
+.right-Best-of-summer img{
+    width: 100%;
+}
+
+.green-text{
+    color: #108934;
+}
+
+.cricket-must-container{
+   width: 100%;
+}
+.right-Best-of-summer{
+    width: 100%;
+}
+
+.cricket-must-container{
+    overflow: hidden;
+   
+}
+
+.left-Best-of-summer{
+    padding-right: 10px;
+
+}
+
+.Best-of-summer-container2{
+    background-color: red;
+    height: 614px;
+    width: 614px;
+}
+
+.Best-of-summer-container2 img{
+    height: 100%;
+    width: 100%;
+}
+
+/* startin of footer */
+     /* starting of footer */
+
+   /* Footer container */
+   .footer-container {
+    background-color: #212121;
+    color:#ffff;
+    padding: 20px;
+}
+
+/* Footer top section */
+.footer-top {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* Footer column */
+.footer-column {
+    flex: 1;
+    margin-right: 10px;
+}
+
+/* Footer header */
+.fheader {
+    font-weight: bold;
+}
+
+/* Footer links */
+.footer-column p {
+    margin: 5px 0;
+}
+
+/* Footer social icons */
+._2l3nc- {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+/* Registered office address */
+.fregisteredoffice {
+    margin-top: 20px;
+    font-size: 12px;
+}
+
+/* Footer bottom */
+.footer-bottom {
+    margin-top: 20px;
+  border-top: 1px solid #ddd;
+  padding-top: 10px;
+  text-align: center;
+
+  
+  gap: 85px;
+ 
+  width: 100%;
+}
+
+.footer p{
+    color:#ffff;
+    font-size:12px;
+
+}
+.MkhHNl.btl4ck{
+    border-left: 1px solid #454d5e;
+    padding-left: 40px;
+}
+
+
+
+.footer-bottom-container{
+   
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+
+
